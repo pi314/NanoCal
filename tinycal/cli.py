@@ -101,7 +101,8 @@ parser.add_argument('-m', '--mode', dest='mode', type=str,
 parser.add_argument('--marks', type=FileType('r'), dest='marks', default=None,
                     help='Specify the date marking file.')
 
-parser.add_argument('-p', '--profile', type=str, dest='profile', default='default',
+parser.add_argument('-p', '--profile', type=str, dest='profile',
+                    default='default', nargs='?', const=False,
                     help='Specify the profile.')
 
 month_hint_keywords = ('range', 'sep', 'text')

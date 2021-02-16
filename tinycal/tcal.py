@@ -93,6 +93,13 @@ def main():
         conf = TinyCalConfig()
         conf.merge(conf_set.get('default', {}))
 
+        if args.profile is False:
+            print('Available profiles:', file=sys.stderr)
+            for p in sorted(conf_set.keys() - {'DEFAULT'}):
+                print('  ' + p, file=sys.stderr)
+
+            exit(1)
+
         if args.profile != 'default':
             conf.merge(conf_set[args.profile])
 
