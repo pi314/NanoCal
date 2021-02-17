@@ -201,7 +201,7 @@ class Color:
 
             # Special case: black:BLACK => black:white
             # It's because black bg is still black
-            if bg.name == 'black' and bg.bright:
+            if isinstance(bg, ColorValueANSI) and bg.name == 'black' and bg.bright:
                 bg.name = 'white'
                 bg.bright = 0
 
