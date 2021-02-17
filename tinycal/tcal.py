@@ -42,8 +42,8 @@ def parse_marks_file(marks_file):
     if not marks_file or not exists(marks_file) or not isfile(marks_file):
         return []
 
-    date_mark_fmt = re.compile(r'^(\d\d\d\d)/(\d\d)/(\d\d) ([a-zA-Z:]+)(.*)$')
-    date_range_mark_fmt = re.compile(r'^(\d\d\d\d)/(\d\d)/(\d\d) ?[~-] ?(\d\d\d\d)/(\d\d)/(\d\d) ([a-zA-Z:]+)(.*)$')
+    date_mark_fmt = re.compile(r'^(\d\d\d\d)/(\d\d)/(\d\d) ([0-9a-zA-Z:]+)(.*)$')
+    date_range_mark_fmt = re.compile(r'^(\d\d\d\d)/(\d\d)/(\d\d) ?[~-] ?(\d\d\d\d)/(\d\d)/(\d\d) ([0-9a-zA-Z:]+)(.*)$')
 
     date_marks = []
     with open(marks_file) as f:
