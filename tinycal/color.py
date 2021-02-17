@@ -161,7 +161,10 @@ class Color:
 
         # List[Color]
         if isinstance(other, (list, tuple)) and all(isinstance(o, Color) for o in other):
-            return sum(other, start=ret)
+            # return sum(other, start=ret) # doesnt work in Python3.6
+            for o in other:
+                ret += o
+            return ret
 
         if not isinstance(other, Color):
             raise ValueError('Cannot add ' + other.__class__.__name__ + ' to Color')
