@@ -38,7 +38,7 @@ class TinyCalConfig:
     # red:green underline italic
     # reverse black
 
-    color_default = ColorListField(default=[Color('white:none')])
+    color_default = ColorListField(default=[Color('none:none')])
     color_border = ColorListField(default=[Color('none:none')])
     color_wk = ColorListField(default=[Color('BLACK')])
     color_fill = ColorListField(default=[Color('BLACK')])
